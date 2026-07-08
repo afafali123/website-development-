@@ -1,38 +1,220 @@
+```html
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise 💖</title>
 
-<title>My Space Page</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@700&family=Poppins:wght@300;500;700&family=Lobster&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="page-header">
+<!-- Floating stars -->
+<div id="stars"></div>
 
-<h1>My Space Page</h1>
+<!-- ================= PAGE 1 ================= -->
 
-<p>Welcome to my corner of the galaxy!</p>
+<section class="page active" id="page1">
+
+    <div class="card">
+
+        <h1>💖 Wanna See What's Inside? 💖</h1>
+
+        <div class="btns">
+
+            <button onclick="showPage('page2')">
+                YES 💗
+            </button>
+
+            <button onclick="showPage('pageNo')">
+                NO 😒
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= PAGE NO ================= -->
+
+<section class="page" id="pageNo">
+
+    <div class="card">
+
+        <h1>HOW DARE YOU??</h1>
+
+        <h2>Go back and press YES! 😂💖</h2>
+
+        <button onclick="showPage('page1')">
+            Back
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================= PAGE 2 ================= -->
+
+<section class="page" id="page2">
+
+    <div class="card">
+
+        <h1>🎉 HAPPY BIRTHDAYYYY 🎉</h1>
+
+        <h2>To My Bestest Friend ❤️</h2>
+
+        <p>
+            Today is all about YOU! 💕
+        </p>
+
+        <button onclick="showPage('page3')">
+            Next ➜
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================= PAGE 3 ================= -->
+
+<section class="page" id="page3">
+
+<div class="card letter">
+
+<h1>💌 A Letter For You 💌</h1>
+
+<p>
+
+Happy Birthday to the most amazing friend anyone could ever ask for!
+
+I hope your special day is filled with happiness, endless laughter, beautiful memories, and everything you've ever wished for.
+
+happiest birthday to my 5 din ka dost , to the one i love talking too, to the one i who is chashmish , to the one who have the best persnaility
+, may you mever die, js joking , may allah give you long live life , and bss yrr aur kiya hi kahoooo.... kotaa
+
+❤️🎂🎉
+
+</p>
+
+<button onclick="showPage('page4')">
+
+Next ➜
+
+</button>
 
 </div>
 
-<div class="fact-card">
+</section>
 
-<h2>Fun Space Fact</h2>
+<!-- ================= PAGE 4 ================= -->
 
-<p>The Sun is so big that one million Earths could fit inside it.</p>
+<section class="page" id="page4">
+
+<div class="card">
+
+
+
+<iframe
+ 
+    width="700"
+    height="400"
+    src="https://www.youtube.com/embed/cNGjD0VG4R8"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+</iframe>
+}
+
+.photo{
+    font-size:120px;
+    margin-bottom:15px;
+}
+
+.idcard h2{
+    color:#ff1493;
+    font-family:'Pacifico', cursive;
+}
+
+.idcard h3{
+    color:#7b1fa2;
+    margin:10px 0;
+    font-family:Poppins, sans-serif;
+}
+
+.funny{
+    color:#ff69b4;
+    font-size:22px;
+    margin-top:10px;
+    font-family:'Dancing Script', cursive;
+}
+
+        <br><br>
+
+        <button onclick="showPage('page5')">Next ➜</button>
+
+    </div>
+
+</section>
+</iframe>
+
+
+
+<br><br>
+
+<button onclick="showPage('page5')">
+
+Next ➜
+
+</button>
 
 </div>
 
-<div class="star"></div>
+</section>
 
-<p class="footer-text">Made by ___________</p>
+<!-- ================= PAGE 5 ================= -->
 
+<div id="giftPage">
+    <div class="gift-icon" onclick="openGift()">🎁</div>
+
+    <button id="nextBtn" onclick="nextPage()" style="display:none;">
+        Next ➡️
+    </button>
+</div>
+
+<button onclick="openMonkey()">Next ➡️</button>
+
+<script>
+function openMonkey() {
+    window.location.href = "page4.html";
+}
+</script>
+
+</section>
+
+<script src="script.js"></script>
+<!-- ================= MONKEY ID CARD PAGE ================= -->
+
+<section class="page" id="page4">
+
+    <div class="card">
+
+       <button onclick="openMonkey()">Next ➡️</button>
+
+        <button onclick="showPage('page1')">
+        
+        </button>
+<button onclick="openMonkey()">Next ➡️</button>
+
+    </div>
+
+</section>
 </body>
-
 </html>
-
+```

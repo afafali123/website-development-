@@ -1,77 +1,468 @@
-body {
+/* RESET */
 
-background-color: darkblue;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-background-image: linear-gradient(to bottom, darkblue, navy);
+body{
 
-background-repeat: no-repeat;
+    overflow:hidden;
+    font-family:Poppins,sans-serif;
+}
 
-background-position: top center;
+/* ================= PAGES ================= */
 
-font-family: Arial, sans-serif;
+.page{
+
+    display:none;
+
+    width:100%;
+
+    height:100vh;
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    justify-content:center;
+
+    align-items:center;
+
+    animation:fade .8s ease;
 
 }
 
+/* Different wallpaper for every page */
 
-.page-header {
+#page1{
 
-background-image: linear-gradient(to right, purple, coral);
-
-border-radius: 16px;
-
-text-align: center;
-
-color: white;
+background-image:url("images/bg1.jpg");
 
 }
 
+#pageNo{
 
-.fact-card {
-
-background-color: midnightblue;
-
-border-radius: 12px;
-
-color: white;
+background-image:url("images/bg2.jpg");
 
 }
 
+#page2{
 
-.fact-card h2 {
-
-color: coral;
-
-}
-
-
-.star {
-
-width: 60px;
-
-height: 60px;
-
-background-color: yellow;
-
-border-radius: 50%;
-
-animation: twinkle 2s infinite alternate;
+background-image:url("images/bg3.jpg");
 
 }
 
+#page3{
 
-@keyframes twinkle {
-
-from { background-color: yellow; }
-
-to { background-color: white; }
+background-image:url("images/bg4.jpg");
 
 }
 
+#page4{
 
-.footer-text {
+background-image:url("images/bg5.jpg");
 
-text-align: center;
+}
 
-color: coral;
+#page5{
 
+background-image:url("images/bg1.jpg");
+
+}
+
+.active{
+
+display:flex;
+
+}
+
+/* ================= CARD ================= */
+
+.card{
+
+background:rgba(255,255,255,.75);
+
+backdrop-filter:blur(10px);
+
+padding:45px;
+
+border-radius:30px;
+
+width:80%;
+
+max-width:900px;
+
+text-align:center;
+
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+
+animation:pop .7s;
+
+}
+
+/* ================= HEADINGS ================= */
+
+#page1 h1{
+
+font-family:Pacifico;
+
+color:#ff1493;
+
+font-size:55px;
+
+}
+
+#pageNo h1{
+
+font-family:Lobster;
+
+color:#e91e63;
+
+font-size:55px;
+
+}
+
+#page2 h1{
+
+font-family:'Dancing Script';
+
+color:#ff3399;
+
+font-size:65px;
+
+}
+
+#page3 h1{
+
+font-family:Pacifico;
+
+color:#ff4da6;
+
+font-size:50px;
+
+}
+
+#page4 h1{
+
+font-family:Lobster;
+
+color:#cc00cc;
+
+font-size:55px;
+
+}
+
+#page5 h1{
+
+font-family:'Dancing Script';
+
+color:#ff1493;
+
+font-size:60px;
+
+}
+
+h2{
+
+margin-top:15px;
+
+font-size:32px;
+
+color:#ff66b3;
+
+}
+
+/* ================= LETTER ================= */
+
+.letter p{
+
+margin-top:25px;
+
+font-size:22px;
+
+line-height:1.9;
+
+color:#7b1fa2;
+
+font-family:Poppins;
+
+max-height:350px;
+
+overflow:auto;
+
+padding:15px;
+
+}
+
+/* ================= BUTTONS ================= */
+
+button{
+
+margin-top:30px;
+
+padding:15px 40px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:22px;
+
+background:#ff69b4;
+
+color:white;
+
+cursor:pointer;
+
+transition:.3s;
+
+font-weight:bold;
+
+}
+
+button:hover{
+
+background:#ff1493;
+
+transform:scale(1.08);
+
+box-shadow:0 0 20px hotpink;
+
+}
+
+/* YES NO BUTTONS */
+
+.btns{
+
+display:flex;
+
+justify-content:center;
+
+gap:40px;
+
+margin-top:40px;
+
+}
+
+/* ================= GIFT ================= */
+
+.gift{
+
+font-size:140px;
+
+cursor:pointer;
+
+transition:.5s;
+
+user-select:none;
+
+}
+
+.gift:hover{
+
+transform:scale(1.2) rotate(10deg);
+
+}
+
+#giftMessage{
+
+margin-top:30px;
+
+font-family:'Dancing Script';
+
+font-size:42px;
+
+color:#ff1493;
+
+font-weight:bold;
+
+}
+
+/* ================= VIDEO ================= */
+
+iframe{
+
+border-radius:25px;
+
+box-shadow:0 0 25px rgba(255,105,180,.5);
+
+}
+
+/* ================= HEARTS ================= */
+
+#hearts{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+.heart{
+
+position:absolute;
+
+bottom:-50px;
+
+font-size:30px;
+
+animation:float 10s linear infinite;
+
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+@keyframes pop{
+
+0%{
+
+transform:scale(.7);
+
+opacity:0;
+
+}
+
+100%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0) rotate(0deg);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-110vh) rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.card{
+
+width:92%;
+
+padding:25px;
+
+}
+
+h1{
+
+font-size:40px!important;
+
+}
+
+h2{
+
+font-size:24px;
+
+}
+
+button{
+
+font-size:18px;
+
+padding:12px 28px;
+
+}
+
+iframe{
+
+width:100%;
+
+height:240px;
+
+}
+
+.letter p{
+
+font-size:18px;
+
+}
+
+.gift{
+
+font-size:100px;
+
+}
+
+}.idcard{
+    width:350px;
+    margin:auto;
+    padding:25px;
+    background:white;
+    border-radius:25px;
+    box-shadow:0 0 20px hotpink;
+    border:5px dashed deeppink;
+}
+
+.photo{
+    font-size:120px;
+    margin-bottom:15px;
+}
+
+.idcard h2{
+    color:#ff1493;
+    font-family:'Pacifico', cursive;
+}
+
+.idcard h3{
+    color:#7b1fa2;
+    margin:10px 0;
+    font-family:Poppins, sans-serif;
+}
+
+.funny{
+    color:#ff69b4;
+    font-size:22px;
+    margin-top:10px;
+    font-family:'Dancing Script', cursive;
 }
