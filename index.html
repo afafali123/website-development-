@@ -1,220 +1,541 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthday Surprise 💖</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@700&family=Poppins:wght@300;500;700&family=Lobster&display=swap" rel="stylesheet">
+<title>Happy Birthday ❤️</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<!-- Floating stars -->
-<div id="stars"></div>
+<!-- PAGE 1 -->
 
-<!-- ================= PAGE 1 ================= -->
+<div class="page active" id="page1">
 
-<section class="page active" id="page1">
+<h1>🎀 You wanna see what's inside? 🎀</h1>
 
-    <div class="card">
+<div class="buttons">
 
-        <h1>💖 Wanna See What's Inside? 💖</h1>
+<button onclick="showPage('page3')">
+YES ❤️
+</button>
 
-        <div class="btns">
+<button onclick="showPage('page2')">
+NO 🙄
+</button>
 
-            <button onclick="showPage('page2')">
-                YES 💗
-            </button>
+</div>
 
-            <button onclick="showPage('pageNo')">
-                NO 😒
-            </button>
+</div>
 
-        </div>
+<!-- PAGE 2 -->
 
-    </div>
+<div class="page" id="page2">
 
-</section>
+<h1>😤 HOW DARE YOU??</h1>
 
-<!-- ================= PAGE NO ================= -->
+<p>Click below and choose the correct answer 😒</p>
 
-<section class="page" id="pageNo">
+<button onclick="showPage('page1')">
+Go Back
+</button>
 
-    <div class="card">
+</div>
 
-        <h1>HOW DARE YOU??</h1>
+<!-- PAGE 3 -->
 
-        <h2>Go back and press YES! 😂💖</h2>
+<div class="page" id="page3">
 
-        <button onclick="showPage('page1')">
-            Back
-        </button>
+<h1>🎉 HAPPY BIRTHDAYYYY 🎉</h1>
 
-    </div>
+<h2>To My Bestest Friend ❤️</h2>
 
-</section>
+<button onclick="showPage('page4')">
+Next ➜
+</button>
 
-<!-- ================= PAGE 2 ================= -->
+</div>
 
-<section class="page" id="page2">
+<!-- PAGE 4 -->
 
-    <div class="card">
+<div class="page" id="page4">
 
-        <h1>🎉 HAPPY BIRTHDAYYYY 🎉</h1>
+<h1>💌 A Letter For You</h1>
 
-        <h2>To My Bestest Friend ❤️</h2>
+<p class="letter">
 
-        <p>
-            Today is all about YOU! 💕
-        </p>
+Happy Birthday to the most amazing friend anyone could ever ask. ❤️
 
-        <button onclick="showPage('page3')">
-            Next ➜
-        </button>
+Thank you for always being so dramatic 
 
-    </div>
+To my favorite person...
 
-</section>
+To my chashmish...
 
-<!-- ================= PAGE 3 ================= -->
+To the one who calls me achi and pretty even when I don't believe it.
 
-<section class="page" id="page3">
+I hope this birthday brings you lots of happiness, laughter, smiles, cake, gifts and everything you wish for.
 
-<div class="card letter">
+Stay happy, and never be that non-chalant one or i'll leave u
 
-<h1>💌 A Letter For You 💌</h1>
+Thank you for being my ...........
 
-<p>
 
-Happy Birthday to the most amazing friend anyone could ever ask for!
+aur bss itni tareefe theek hai warna mere uper mar jao ge 
 
-I hope your special day is filled with happiness, endless laughter, beautiful memories, and everything you've ever wished for.
-
-happiest birthday to my 5 din ka dost , to the one i love talking too, to the one i who is chashmish , to the one who have the best persnaility
-, may you mever die, js joking , may allah give you long live life , and bss yrr aur kiya hi kahoooo.... kotaa
-
-❤️🎂🎉
+Happy Birthday once again!! 🎂🎉❤️
 
 </p>
 
-<button onclick="showPage('page4')">
-
+<button onclick="showPage('page5')">
 Next ➜
-
 </button>
 
 </div>
 
-</section>
+<!-- PAGE 5 -->
 
-<!-- ================= PAGE 4 ================= -->
+<div class="page" id="page5">
 
-<section class="page" id="page4">
+<h1>🎂 Create Your Birthday Cake 🎂</h1>
 
-<div class="card">
-
-
-
-<iframe
- 
-    width="700"
-    height="400"
-    src="https://www.youtube.com/embed/cNGjD0VG4R8"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-</iframe>
-}
-
-.photo{
-    font-size:120px;
-    margin-bottom:15px;
-}
-
-.idcard h2{
-    color:#ff1493;
-    font-family:'Pacifico', cursive;
-}
-
-.idcard h3{
-    color:#7b1fa2;
-    margin:10px 0;
-    font-family:Poppins, sans-serif;
-}
-
-.funny{
-    color:#ff69b4;
-    font-size:22px;
-    margin-top:10px;
-    font-family:'Dancing Script', cursive;
-}
-
-        <br><br>
-
-        <button onclick="showPage('page5')">Next ➜</button>
-
-    </div>
-
-</section>
-</iframe>
-
-
+<label>Choose Flour</label>
 
 <br><br>
 
-<button onclick="showPage('page5')">
+<select id="flour">
 
+<option>Vanilla Flour</option>
+<option>Chocolate Flour</option>
+<option>Red Velvet Flour</option>
+
+</select>
+
+<br><br>
+
+<label>Choose Sugar</label>
+
+<br><br>
+
+<select id="sugar">
+
+<option>White Sugar</option>
+<option>Brown Sugar</option>
+<option>Less Sugar</option>
+
+</select>
+
+<br><br>
+
+<label>Choose Flavor</label>
+
+<br><br>
+
+<select id="flavor">
+
+<option>Vanilla</option>
+<option>Chocolate</option>
+<option>Strawberry</option>
+<option>Blueberry</option>
+<option>Butterscotch</option>
+
+</select>
+
+<br><br>
+
+<label>Choose Topping</label>
+
+<br><br>
+
+<select id="topping">
+
+<option>🍓 Strawberries</option>
+<option>🍫 Chocolate Chips</option>
+<option>🍒 Cherries</option>
+<option>🌈 Sprinkles</option>
+<option>🧁 Whipped Cream</option>
+
+</select>
+
+<br><br>
+
+<button onclick="makeCake()">
+Bake Cake 🎂
+</button>
+
+<div id="cakeResult" style="display:none; margin-top:25px;">
+
+<h2>🎂 Your Cake is Ready! 🎂</h2>
+
+<div id="cakeEmoji" style="font-size:120px;">
+🎂
+</div>
+
+<p id="cakeText"></p>
+
+</div>
+
+<br>
+
+<button onclick="showPage('page6')">
 Next ➜
-
 </button>
 
 </div>
 
-</section>
+<!-- PAGE 6 -->
 
-<!-- ================= PAGE 5 ================= -->
+<div class="page" id="page6">
 
-<div id="giftPage">
-    <div class="gift-icon" onclick="openGift()">🎁</div>
+<h1>🎵 Wanna Be Yours 🎵</h1>
 
-    <button id="nextBtn" onclick="nextPage()" style="display:none;">
-        Next ➡️
-    </button>
+<iframe
+width="560"
+height="315"
+src="https://www.youtube.com/embed/fukGbiPuBjU?si=Yf_Gq4xlVB2SX4xN"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
+</iframe>
+
+<br><br>
+
+<button onclick="showPage('page7')">
+Next ➜
+</button>
+
+</div>
+<!-- PAGE 7 -->
+
+<div class="page" id="page7">
+
+<h1>🎁 Click The Gift 🎁</h1>
+
+<div id="gift" onclick="openGift()">
+🎁
 </div>
 
-<button onclick="openMonkey()">Next ➡️</button>
+<div id="giftMessage" style="display:none;">
 
-<script>
-function openMonkey() {
-    window.location.href = "page4.html";
-}
-</script>
+<h2> Ghr ao mere, dungi gift bhi warna nhi chye to phrr na ana 
+    lekin mujhe chayee !!!
+</h2>
 
-</section>
+<br>
+
+<button onclick="showPage('page8')">
+Next ➜
+</button>
+
+</div>
+
+</div>
+
+<!-- PAGE 8 -->
+
+<div class="page" id="page8">
+
+<h1>🎁 Lucky Gift Time! 🎁</h1>
+
+<p>You can choose only ONE gift! 😏</p>
+
+<div class="giftRow">
+
+<div class="luckyGift" onclick="pickGift(this)">
+🎁
+</div>
+
+<div class="luckyGift" onclick="pickGift(this)">
+🎁
+</div>
+
+<div class="luckyGift" onclick="pickGift(this)">
+🎁
+</div>
+
+</div>
+
+<h2 id="giftResult"></h2>
+
+<br>
+
+<button onclick="showPage('page9')">
+Next ➜
+</button>
+
+</div>
+
+<!-- PAGE 9 -->
+
+<div class="page" id="page9">
+
+<h1>📅 Birthday Calendar 📅</h1>
+
+<h2>19 July ❤️</h2>
+
+<div class="calendar">
+
+<div class="month">JULY</div>
+
+<div class="days">
+
+<div>Sun</div>
+<div>Mon</div>
+<div>Tue</div>
+<div>Wed</div>
+<div>Thu</div>
+<div>Fri</div>
+<div>Sat</div>
+
+<div></div>
+<div></div>
+<div class="date">1</div>
+<div class="date">2</div>
+<div class="date">3</div>
+<div class="date">4</div>
+<div class="date">5</div>
+
+<div class="date">6</div>
+<div class="date">7</div>
+<div class="date">8</div>
+<div class="date">9</div>
+<div class="date">10</div>
+<div class="date">11</div>
+<div class="date">12</div>
+
+<div class="date">13</div>
+<div class="date">14</div>
+<div class="date">15</div>
+<div class="date">16</div>
+<div class="date">17</div>
+<div class="date">18</div>
+
+<div class="birthday">
+🎂<br>19
+</div>
+
+<div class="date">20</div>
+<div class="date">21</div>
+<div class="date">22</div>
+<div class="date">23</div>
+<div class="date">24</div>
+<div class="date">25</div>
+<div class="date">26</div>
+
+<div class="date">27</div>
+<div class="date">28</div>
+<div class="date">29</div>
+<div class="date">30</div>
+<div class="date">31</div>
+
+</div>
+
+</div>
+
+<br>
+
+<button onclick="showPage('page10')">
+Next ➜
+</button>
+
+</div>
+
+<!-- PAGE 10 -->
+
+<div class="page" id="page10">
+
+<h1>🕯️ Blow The Candle 🕯️</h1>
+
+<p>Click Start and blow into your microphone! 💨</p>
+
+<div class="cake">
+
+🎂
+
+<div id="flame">
+🔥
+</div>
+
+</div>
+
+<h2 id="wishMessage"></h2>
+
+<button onclick="startListening()">
+🎤 Start
+</button>
+
+<br><br>
+
+<button onclick="showPage('page11')">
+Next ➜
+</button>
+
+</div>
+
+<!-- PAGE 11 -->
+
+<div class="page" id="page11">
+
+<h1>🎮 Tic Tac Toe 🎮</h1>
+
+<p>Let's play one last game! ❤️</p>
+
+<div id="board">
+
+<div class="cell" onclick="play(this,0)"></div>
+<div class="cell" onclick="play(this,1)"></div>
+<div class="cell" onclick="play(this,2)"></div>
+
+<div class="cell" onclick="play(this,3)"></div>
+<div class="cell" onclick="play(this,4)"></div>
+<div class="cell" onclick="play(this,5)"></div>
+
+<div class="cell" onclick="play(this,6)"></div>
+<div class="cell" onclick="play(this,7)"></div>
+<div class="cell" onclick="play(this,8)"></div>
+
+</div>
+
+<h2 id="result"></h2>
+
+<button onclick="resetGame()">
+Play Again 🔄
+</button>
+
+<br><br>
+
+<button onclick="showPage('page12')">
+Finish Surprise 🎉
+</button>
+
+</div>
+
+<!-- PAGE 12 -->
+
+<div class="page" id="page12">
+
+<h1>🎉 YOU MADE IT!! 🎉</h1>
+
+<h2>Happy Birthday once again 
+    ab mai jarahi ho mere cousins ai hoe hai </h2>
+
+<video width="500" controls autoplay loop muted>
+
+<source src="Download.mp4" type="video/mp4">
+
+Your browser does not support the video tag.
+
+</video>
+
+<br><br>
+
+<p>
+
+bilkul apki copy 👌❤️
+
+</p>
+
+<h2>🎂 HAPPY BIRTHDAY!! 🎂</h2>
+
+</div>
 
 <script src="script.js"></script>
-<!-- ================= MONKEY ID CARD PAGE ================= -->
+<button onclick="showPage('page13')"></button>
 
-<section class="page" id="page4">
 
-    <div class="card">
 
-       <button onclick="openMonkey()">Next ➡️</button>
 
-        <button onclick="showPage('page1')">
-        
-        </button>
-<button onclick="openMonkey()">Next ➡️</button>
+<!-- PAGE 13 -->
 
-    </div>
+<div class="page" id="page13">
 
-</section>
+<h1>🎉 i won't tell 🎉</h1>
+
+
+<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@cookie_keru/video/7617250036295961888"
+ data-video-id="7617250036295961888" style="max-width: fill parentpx;min-width: 325px;" > <section> <a target="_blank" title="@cookie_keru" href="https://www.tiktok.com/@cookie_keru?refer=embed">@cookie_keru</a> I FINALLY finished It !! (╥﹏╥) <a title="animation" target="_blank" href="https://www.tiktok.com/tag/animation?refer=embed">#Animation</a> <a title="animationmeme" target="_blank" href="https://www.tiktok.com/tag/animationmeme?refer=embed">#animationmeme</a> <a title="cat" target="_blank" href="https://www.tiktok.com/tag/cat?refer=embed">#cat</a> <a title="catanimation" target="_blank" href="https://www.tiktok.com/tag/catanimation?refer=embed">#catanimation</a> <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a> <a target="_blank" title="♬ original sound - #four" href="https://www.tiktok.com/music/original-sound-7572642440541113101?refer=embed">♬ original sound - #four</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+
+ 
+<button onclick="showPage('page14')">
+One Last Message ❤️ Next~
+</button>
+
+</div>
+ <!-- PAGE 14 -->
+
+<div class="page" id="page14">
+
+<h1>🎉🎂 THE END... OR IS IT? 🤭 🎂🎉</h1>
+
+<h2>💖 A Few (Okay... MANY 😂) Birthday Wishes For You 💖</h2>
+
+<div class="wishBox">
+
+<p>🎂 Happy Birthday to the one who keeps getting older... but somehow not wiser. 😂</p>
+
+<p>🎁 May your life be filled with happiness, unlimited money, and absolutely no math exams. 🤲😂</p>
+
+<p>🍰 I hope your cake has more layers than your excuses. 😌</p>
+
+<p>🎈 May all your dreams come true... except the weird ones. 😭😂</p>
+
+<p>💸 May your wallet always stay full and your phone battery never die at 1%. 🤌</p>
+
+<p>🍫 May you always have enough money for chocolates... because apparently "kote chocolate ke liye paise hai bss." 😂</p>
+
+<p>😎 Stay awesome... but not more awesome than me. 😌✨</p>
+
+<p>👓 Stay my favorite chashmish forever. 🤓❤️</p>
+
+<p>📚 May your marks be higher than your screen time... (Okay, impossible. 😂)</p>
+
+<p>😴 Sleep early... (I know you won't.) 😭</p>
+
+<p>🍕 Eat cake, eat pizza, eat biryani... today calories don't count. 😌🍕</p>
+
+<p>😂 Laugh loudly, smile endlessly, and annoy everyone exactly the same way you always do. 🤭</p>
+
+<p>🌍 I hope this year brings you happiness, success, good health and lots of unforgettable memories.</p>
+
+<p>❤️ Thank you for being such an amazing friend. Life is so much more fun with you around.</p>
+
+<p>🎉 Keep smiling because your smile makes everyone's day brighter!</p>
+
+<p>🎂 And remember...</p>
+
+<h2>YOU ARE OFFICIALLY ONE YEAR CLOSER TO BECOMING A GRANDPARENT!! 👵😂</h2>
+
+<h1>🤣🤣🤣</h1>
+
+<h2>JKKKKKKKKKKKKKKK 😭❤️</h2>
+
+<h1>🎉 HAPPY BIRTHDAYYYYYYYYYYY ! 🎂🎈💖✨</h1>
+
+<h2>Love You (As A Friend 😂)</h2>
+
+</div>
+
+<button onclick="showPage('page1')">
+🔄 Start Again
+</button>
+
+</div>
+<script src="script.js"></script>
+
+
 </body>
+
 </html>
-```
+
+
+
+
+

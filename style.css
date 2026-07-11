@@ -1,242 +1,207 @@
-/* RESET */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
 body{
 
-    overflow:hidden;
-    font-family:Poppins,sans-serif;
-}
+margin:0;
 
-/* ================= PAGES ================= */
+padding:0;
+
+font-family:'Poppins',sans-serif;
+
+background-image:url("wallpaper.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+}
 
 .page{
 
-    display:none;
+display:none;
 
-    width:100%;
+width:80%;
 
-    height:100vh;
+background:rgba(255,255,255,.75);
 
-    background-size:cover;
+padding:40px;
 
-    background-position:center;
+border-radius:20px;
 
-    background-repeat:no-repeat;
-
-    justify-content:center;
-
-    align-items:center;
-
-    animation:fade .8s ease;
-
-}
-
-/* Different wallpaper for every page */
-
-#page1{
-
-background-image:url("images/bg1.jpg");
-
-}
-
-#pageNo{
-
-background-image:url("images/bg2.jpg");
-
-}
-
-#page2{
-
-background-image:url("images/bg3.jpg");
-
-}
-
-#page3{
-
-background-image:url("images/bg4.jpg");
-
-}
-
-#page4{
-
-background-image:url("images/bg5.jpg");
-
-}
-
-#page5{
-
-background-image:url("images/bg1.jpg");
+box-shadow:0 0 20px rgba(0,0,0,.3);
 
 }
 
 .active{
 
-display:flex;
+display:block;
 
 }
 
-/* ================= CARD ================= */
+h1{
 
-.card{
-
-background:rgba(255,255,255,.75);
-
-backdrop-filter:blur(10px);
-
-padding:45px;
-
-border-radius:30px;
-
-width:80%;
-
-max-width:900px;
-
-text-align:center;
-
-box-shadow:0 10px 30px rgba(0,0,0,.2);
-
-animation:pop .7s;
-
-}
-
-/* ================= HEADINGS ================= */
-
-#page1 h1{
-
-font-family:Pacifico;
-
-color:#ff1493;
-
-font-size:55px;
-
-}
-
-#pageNo h1{
-
-font-family:Lobster;
-
-color:#e91e63;
-
-font-size:55px;
-
-}
-
-#page2 h1{
-
-font-family:'Dancing Script';
-
-color:#ff3399;
-
-font-size:65px;
-
-}
-
-#page3 h1{
-
-font-family:Pacifico;
-
-color:#ff4da6;
-
-font-size:50px;
-
-}
-
-#page4 h1{
-
-font-family:Lobster;
-
-color:#cc00cc;
-
-font-size:55px;
-
-}
-
-#page5 h1{
-
-font-family:'Dancing Script';
-
-color:#ff1493;
-
-font-size:60px;
+color:#B22222;
 
 }
 
 h2{
 
-margin-top:15px;
-
-font-size:32px;
-
-color:#ff66b3;
+color:#0B3D91;
 
 }
 
-/* ================= LETTER ================= */
+p{
 
-.letter p{
+color:#0B3D91;
 
-margin-top:25px;
+font-size:20px;
 
-font-size:22px;
-
-line-height:1.9;
-
-color:#7b1fa2;
-
-font-family:Poppins;
-
-max-height:350px;
-
-overflow:auto;
-
-padding:15px;
+line-height:35px;
 
 }
-
-/* ================= BUTTONS ================= */
 
 button{
 
-margin-top:30px;
+padding:15px 35px;
 
-padding:15px 40px;
+font-size:18px;
+
+margin:20px;
 
 border:none;
 
-border-radius:50px;
-
-font-size:22px;
-
-background:#ff69b4;
-
-color:white;
+border-radius:40px;
 
 cursor:pointer;
 
-transition:.3s;
+background:#B22222;
 
-font-weight:bold;
+color:white;
+
+transition:.3s;
 
 }
 
 button:hover{
 
-background:#ff1493;
-
-transform:scale(1.08);
-
-box-shadow:0 0 20px hotpink;
+background:#0B3D91;
 
 }
 
-/* YES NO BUTTONS */
+#gift{
 
-.btns{
+font-size:120px;
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+#gift:hover{
+
+transform:scale(1.2);
+
+}
+
+#giftMessage{
+
+display:none;
+
+margin-top:30px;
+
+font-size:28px;
+
+color:#B22222;
+
+}
+
+iframe{
+
+border-radius:20px;
+
+}
+select{
+
+padding:10px;
+
+width:250px;
+
+font-size:18px;
+
+border-radius:12px;
+
+border:2px solid #B22222;
+
+text-align:center;
+
+}
+
+label{
+
+font-size:20px;
+
+color:#0B3D91;
+
+font-weight:bold;
+
+}
+/* Tic Tac Toe */
+
+#board{
+display:grid;
+grid-template-columns:repeat(3,100px);
+gap:10px;
+justify-content:center;
+margin:25px auto;
+}
+
+.cell{
+
+width:100px;
+height:100px;
+background:white;
+border:3px solid #0B3D91;
+border-radius:15px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:55px;
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.cell:hover{
+
+background:#ffe6ef;
+
+transform:scale(1.05);
+
+}
+
+#result{
+
+margin-top:20px;
+color:#B22222;
+
+}
+.giftRow{
 
 display:flex;
 
@@ -244,225 +209,236 @@ justify-content:center;
 
 gap:40px;
 
-margin-top:40px;
+margin-top:30px;
 
 }
 
-/* ================= GIFT ================= */
+.luckyGift{
 
-.gift{
-
-font-size:140px;
+font-size:90px;
 
 cursor:pointer;
 
-transition:.5s;
-
-user-select:none;
+transition:.3s;
 
 }
 
-.gift:hover{
+.luckyGift:hover{
 
-transform:scale(1.2) rotate(10deg);
+transform:scale(1.2);
 
 }
+.calendar{
+background:white;
+padding:20px;
+border-radius:20px;
+display:inline-block;
+box-shadow:0 0 15px rgba(0,0,0,.2);
+}
 
-#giftMessage{
-
-margin-top:30px;
-
-font-family:'Dancing Script';
-
-font-size:42px;
-
-color:#ff1493;
-
+.month{
+font-size:35px;
 font-weight:bold;
+color:#B22222;
+margin-bottom:20px;
+}
+
+.days{
+display:grid;
+grid-template-columns:repeat(7,60px);
+gap:8px;
+justify-content:center;
+}
+
+.days div{
+padding:10px;
+border-radius:12px;
+text-align:center;
+font-weight:bold;
+}
+
+.date{
+background:#dceeff;
+color:#0B3D91;
+}
+
+.birthday{
+background:#ff4d6d;
+color:white;
+font-size:18px;
+animation:bounce 1s infinite;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-8px);}
+}
+.cake{
+    position:relative;
+    font-size:150px;
+    display:inline-block;
+    margin-top:30px;
+}
+
+#flame{
+    position:absolute;
+    top:-20px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:40px;
+    transition:.4s;
+}
+
+#wishMessage{
+    color:#B22222;
+    margin-top:20px;
+}
+video{
+
+width:500px;
+max-width:90%;
+
+border-radius:20px;
+
+box-shadow:0 0 20px rgba(0,0,0,.3);
+
+margin-top:20px;
 
 }
 
-/* ================= VIDEO ================= */
+video:hover{
 
-iframe{
+transform:scale(1.02);
+
+transition:.3s;
+
+}
+/* ===== PAGE 13 - FINAL VIDEO ===== */
+
+#page13{
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#page13 h1{
+    font-size: 45px;
+    color: #B22222; /* Cherry Red */
+    margin-bottom: 15px;
+}
+
+#page13 h2{
+    font-size: 30px;
+    color: #0B3D91; /* Dark Blue */
+    margin-top: 20px;
+}
+
+#page13 p{
+    font-size: 20px;
+    color: #0B3D91;
+    margin: 20px;
+}
+
+#page13 video{
+    width: 550px;
+    max-width: 90%;
+    border: 5px solid #B22222;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+#page13 video:hover{
+    transform: scale(1.03);
+}
+
+@media (max-width:768px){
+
+#page13 video{
+    width:95%;
+}
+
+#page13 h1{
+    font-size:32px;
+}
+
+#page13 h2{
+    font-size:24px;
+}
+
+}
+/* ===== PAGE 14 ===== */
+
+#page14{
+    text-align:center;
+    padding:40px;
+}
+
+.wishBox{
+
+max-width:800px;
+
+margin:auto;
+
+background:rgba(255,255,255,.75);
+
+padding:30px;
 
 border-radius:25px;
 
-box-shadow:0 0 25px rgba(255,105,180,.5);
+box-shadow:0 0 20px rgba(0,0,0,.2);
 
 }
 
-/* ================= HEARTS ================= */
+.wishBox p{
 
-#hearts{
+font-size:22px;
 
-position:fixed;
+margin:18px 0;
 
-top:0;
+color:#0B3D91;
 
-left:0;
-
-width:100%;
-
-height:100%;
-
-pointer-events:none;
-
-overflow:hidden;
+font-weight:500;
 
 }
 
-.heart{
+#page14 h1{
 
-position:absolute;
+color:#B22222;
 
-bottom:-50px;
-
-font-size:30px;
-
-animation:float 10s linear infinite;
+font-size:45px;
 
 }
 
-/* ================= ANIMATIONS ================= */
+#page14 h2{
 
-@keyframes fade{
-
-from{
-
-opacity:0;
+color:#0B3D91;
 
 }
 
-to{
+#page14 button{
 
-opacity:1;
+margin-top:30px;
 
-}
+padding:15px 35px;
 
-}
+font-size:20px;
 
-@keyframes pop{
+border:none;
 
-0%{
+border-radius:30px;
 
-transform:scale(.7);
+cursor:pointer;
 
-opacity:0;
+background:#B22222;
 
-}
+color:white;
 
-100%{
-
-transform:scale(1);
-
-opacity:1;
+transition:.3s;
 
 }
 
-}
+#page14 button:hover{
 
-@keyframes float{
+transform:scale(1.08);
 
-0%{
-
-transform:translateY(0) rotate(0deg);
-
-opacity:1;
-
-}
-
-100%{
-
-transform:translateY(-110vh) rotate(360deg);
-
-opacity:0;
-
-}
-
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:768px){
-
-.card{
-
-width:92%;
-
-padding:25px;
-
-}
-
-h1{
-
-font-size:40px!important;
-
-}
-
-h2{
-
-font-size:24px;
-
-}
-
-button{
-
-font-size:18px;
-
-padding:12px 28px;
-
-}
-
-iframe{
-
-width:100%;
-
-height:240px;
-
-}
-
-.letter p{
-
-font-size:18px;
-
-}
-
-.gift{
-
-font-size:100px;
-
-}
-
-}.idcard{
-    width:350px;
-    margin:auto;
-    padding:25px;
-    background:white;
-    border-radius:25px;
-    box-shadow:0 0 20px hotpink;
-    border:5px dashed deeppink;
-}
-
-.photo{
-    font-size:120px;
-    margin-bottom:15px;
-}
-
-.idcard h2{
-    color:#ff1493;
-    font-family:'Pacifico', cursive;
-}
-
-.idcard h3{
-    color:#7b1fa2;
-    margin:10px 0;
-    font-family:Poppins, sans-serif;
-}
-
-.funny{
-    color:#ff69b4;
-    font-size:22px;
-    margin-top:10px;
-    font-family:'Dancing Script', cursive;
 }
