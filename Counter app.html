@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        #display {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            color: #007bff;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        button {
+            padding: 12px 18px;
+            border: none;
+            border-radius: 7px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #start {
+            background: #28a745;
+        }
+
+        #pause {
+            background: #ffc107;
+            color: #222;
+        }
+
+        #reset {
+            background: #dc3545;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Counter App</h1>
+
+        <div id="display">00:00:00</div>
+
+        <div class="buttons">
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        let seconds = 0;
+        let timer = null;
+
+        const display = document.getElementById("display");
+        const startBtn = document.getElementById("start");
+        const pauseBtn = document.getElementById("pause");
+        const resetBtn = document.getElementById("reset");
+
+        function updateDisplay() {
+            const hours = Math.floor(seconds / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
+            const secs = seconds % 60;
+
+            display.textContent =
+                String(hours).padStart(2, "0") + ":" +
+                String(minutes).padStart(2, "0") + ":" +
+                String(secs).padStart(2, "0");
+        }
+
+        startBtn.addEventListener("click", function () {
+            if (timer !== null) return;
+
+            timer = setInterval(function () {
+                seconds++;
+                updateDisplay();
+            }, 1000);
+        });
+
+        pauseBtn.addEventListener("click", function () {
+            clearInterval(timer);
+            timer = null;
+        });
+
+        resetBtn.addEventListener("click", function () {
+            clearInterval(timer);
+            timer = null;
+            seconds = 0;
+            updateDisplay();
+        });
+    </script>
+
+</body>
+</html>
